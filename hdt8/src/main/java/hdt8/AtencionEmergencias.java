@@ -1,18 +1,25 @@
 package hdt8;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class AtencionEmergencias {
     public static void main(String[] args) {
-        // Imprime el directorio actual para confirmar desde dónde se busca "pacientes.txt"
+        // Imprime el directorio actual (aunque en este caso no se usará para encontrar el archivo)
         System.out.println("Directorio actual: " + new File(".").getAbsolutePath());
         
         VectorHeap<Paciente> heap = new VectorHeap<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader("pacientes.txt"))) {
+        
+        // Intenta cargar el archivo "pacientes.txt" como recurso del classpath.
+        try (InputStream is = AtencionEmergencias.class.getResourceAsStream("/pacientes.txt")) {
+            if (is == null) {
+                throw new FileNotFoundException("No se encontró el archivo pacientes.txt en el classpath.");
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
             String linea;
             while ((linea = br.readLine()) != null) {
                 // Depuración: imprime la línea leída (entre corchetes para ver espacios o caracteres no deseados)
@@ -48,8 +55,9 @@ public class AtencionEmergencias {
             }
         } catch (IOException e) {
             System.err.println("Error al leer el archivo: " + e.getMessage());
+            return;
         }
-
+        
         // Mostrar el orden de atención de los pacientes según la cola de prioridad
         System.out.println("Orden de atención de los pacientes:");
         while (!heap.isEmpty()) {
