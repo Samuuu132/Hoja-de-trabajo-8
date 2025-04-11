@@ -1,12 +1,10 @@
-Maria Ramirez, apendicitis, A
-Carmen Sarmientos, dolores de parto, B
-Juan Perez, fractura de pierna, C
-Carlos Gomez, dolor de cabeza, D
-Lorenzo Toledo, chikunguya, E
-Ana Rodriguez, quemadura leve, D
-Beatriz Morales, intoxicación alimentaria, B
-Eduardo Sanchez, apendicitis, A
-Veronica Ortiz, infección en la mano, C
-Rafael Diaz, migraña severa, D
-Sofia Jimenez, fractura de brazo, C
-Guillermo Vargas, golpe en la cabeza, A
+Lucia Fernandez, apendicitis, A
+Miguel Rivera, fractura de brazo, B
+Sofia Jimenez, dolor abdominal intenso, A
+Carlos Mendez, resfriado severo, E
+Andrea Lopez, quemadura menor, D
+Roberto Garcia, golpe en la cabeza, A
+Santiago Alvarez, luxación de hombro, B
+Valentina Ruiz, migraña intensa, C
+Diego Torres, infección respiratoria aguda, B
+Natalia Morales, dolor lumbar crónico, D
